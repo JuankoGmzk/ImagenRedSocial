@@ -151,9 +151,11 @@ public class MainActivity extends AppCompatActivity {
         uploadTask.addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+
                 double progress = (100.0 * taskSnapshot.getBytesTransferred())/
                         taskSnapshot.getTotalByteCount();
                 progressDialog.incrementProgressBy((int) progress);
+
             }
         });
 
@@ -166,11 +168,19 @@ public class MainActivity extends AppCompatActivity {
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Toast.makeText(getApplicationContext(),"SuccesFully Uploaded !!",Toast.LENGTH_SHORT).show();
-                progressDialog.dismiss();
-                Uri downloadUrl = taskSnapshot.getUploadSessionUri();
-                String ImageUrl = downloadUrl.toString();
-                tvUrl.setText(ImageUrl);
+
+                imageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+
+                        Toast.makeText(getApplicationContext(),"SuccesFully Uploaded !!",Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
+
+                        String url = uri.toString();
+                        tvUrl.setText(url);
+
+                    }
+                });
             }
         });
 
