@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "819999745009",
+    "firebase_url": "https://imageredsocial.firebaseio.com",
+    "project_id": "imageredsocial",
+    "storage_bucket": "imageredsocial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819999745009:android:7d20ec6990d4c9e49e5a50",
+        "android_client_info": {
+          "package_name": "com.example.imagenredsocial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819999745009-cq0291d36ilscdo8c8o9412fuom1anr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB72USj5nJ51MHRMVIZHo_dwyBfD7KOVU8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819999745009-cq0291d36ilscdo8c8o9412fuom1anr2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
